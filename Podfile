@@ -10,6 +10,7 @@ target 'FaceboookTest' do
     	pod 'FBSDKLoginKit'
 	pod 'Firebase/Firestore'
 	pod 'GoogleSignIn'
-    
+    	pod 'FirebaseFirestoreSwift'
+	pod 'FBSDKCoreKit'
 
 end
