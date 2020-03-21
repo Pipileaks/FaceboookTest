@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>775137423207-50742ei6kmp9in9smpbpu6m0c70fnojc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.775137423207-50742ei6kmp9in9smpbpu6m0c70fnojc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBHreNjmdoOPq1KYoNAb9EaMPDIc7M9kQw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>775137423207</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.umutsever.FaceboookTest</string>
+	<key>PROJECT_ID</key>
+	<string>facebooktesting-2dfd6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>facebooktesting-2dfd6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:775137423207:ios:f42c142373c6b1192d49c2</string>
+	<key>DATABASE_URL</key>
+	<string>https://facebooktesting-2dfd6.firebaseio.com</string>
+</dict>
+</plist>
