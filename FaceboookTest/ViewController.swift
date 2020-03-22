@@ -28,6 +28,9 @@ class ViewController: UIViewController, LoginButtonDelegate {
         GIDSignIn.sharedInstance().signIn()
         
         
+       
+        
+        
         
         let loginButton = FBLoginButton()
         view.addSubview(loginButton)
@@ -41,6 +44,11 @@ class ViewController: UIViewController, LoginButtonDelegate {
         
         
     }
+    
+    
+    
+    
+    
     
     
     
