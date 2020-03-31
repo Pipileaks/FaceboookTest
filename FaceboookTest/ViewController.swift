@@ -40,13 +40,42 @@ class ViewController: UIViewController, LoginButtonDelegate {
         loginButton.delegate = self
         loginButton.permissions = ["email", "public_profile"]
         
+       
+              let db = Firestore.firestore()
+              var ref: DocumentReference? = nil
+//          // 1
+//              ref!.observe(.value, with: { snapshot in
+//            // 2
+//            var newItems: [twitter] = []
+//
+//            // 3
+//            for child in snapshot.children {
+//              // 4
+//              if let snapshot = child as? DataSnapshot,
+//                 let groceryItem = twitter(snapshot: snapshot) {
+//                newItems.append(groceryItem)
+//              }
+//            }
+//
+//            // 5
+//            self.items = newItems
+//            self.tableView.reloadData()
+//          })
+
+        db.collection("twitter").document("1CIrXL9w8NTmHs2ek8J6")
+      .addSnapshotListener { documentSnapshot, error in
+          guard let documents = documentSnapshot else {
+              print("Error fetching documents: \(error!)")
+              return
+          }
+        let cities = documents.data().map() { $0["email"]! }
+          print("Current cities in CA: \(cities)")
+      }
         
-        
-        
+       ////
     }
     
-    
-    
+
     
     
     
@@ -84,7 +113,7 @@ class ViewController: UIViewController, LoginButtonDelegate {
                         print("Failed to start graph request:", err)
                         return
                     }
-
+            
             // Handle vars
             if let result = result as? [String:String],
                 let email: String = result["email"],
@@ -93,11 +122,19 @@ class ViewController: UIViewController, LoginButtonDelegate {
 
             
             {
+                
+              
+                
+                
+                
                 print(email)
                 print(fbId)
                 // Add a new document with a generated ID
-                var ref: DocumentReference? = nil
-                ref = db.collection("twitter").addDocument(data: [
+//                var ref: DocumentReference? = nil
+                
+                let ref = db.collection("twitter")
+                let umutid = fbId
+                ref.document(umutid).setData([
 
                     "email": email,
                     "fbID": fbId,
@@ -107,7 +144,8 @@ class ViewController: UIViewController, LoginButtonDelegate {
                     if let err = err {
                         print("Error adding document: \(err)")
                     } else {
-                        print("Document added with ID: \(ref!.documentID)")
+                        print("Document added with ID: \(ref.document("Facebook"))")
+
                     }
                 }
             }
@@ -115,6 +153,14 @@ class ViewController: UIViewController, LoginButtonDelegate {
             
         }
     }
+   
+    
+  
+    
+    
+    
+    
+    
     
     
 }
